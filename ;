@@ -1,0 +1,20 @@
+export PATH=/usr/local/opt/php@8.0/bin:$PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/shibataryosuke/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/shibataryosuke/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/shibataryosuke/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/shibataryosuke/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+‘export PATH=”/opt/homebrew/opt/php@8.0/bin:/Users/shibataryosuke/opt/anaconda3/bin:/Users/shibataryosuke/opt/anaconda3/condabin:/usr/local/opt/php@7.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/shibataryosuke/.zsh/misc”‘
+export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
