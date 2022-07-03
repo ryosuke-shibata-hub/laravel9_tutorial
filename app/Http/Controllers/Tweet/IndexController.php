@@ -21,10 +21,10 @@ class IndexController extends Controller
         // $tweet = Tweet::orderBy('created_at','desc')->get();
 
         // $tweetService = new TweetService();
-        $tweet = $tweetService->getTweets();
+        $tweets = $tweetService->getTweets();
 
         return view('Tweet.index',[
-            'tweet' => $tweet,
+            'tweets' => $tweets,
         ]);
     }
 }
