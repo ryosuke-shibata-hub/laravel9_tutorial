@@ -43,3 +43,5 @@ class CreateRequest extends FormRequest
         return $this->file('images',[]);
     }
 }
+
+mysql://gkys9zo7vnn9b1zb:isvnviffjnjuhsdc@lcpbq9az4jklobvq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/lizdr0zxkleit8cz
