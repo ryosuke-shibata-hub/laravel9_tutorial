@@ -22,7 +22,7 @@
         </button>
     </template>
 </div>
-
+<script src="https://unpkg.com/alpinejs" defer></script>
 <script>
 function inputFormHandler() {
     return {

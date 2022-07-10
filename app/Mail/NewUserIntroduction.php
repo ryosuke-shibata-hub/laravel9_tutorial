@@ -32,8 +32,6 @@ class NewUserIntroduction extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        // return $this->view('view.name');
-        // return $this->view('email.new_user_introduction');
         return $this->markdown('email.new_user_introduction');
     }
 }

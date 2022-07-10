@@ -18,11 +18,6 @@ class CreateController extends Controller
      */
     public function __invoke(CreateRequest $request, TweetService $tweetService)
     {
-        // $tweet = new Tweet;
-        // $tweet->user_id = $request->userId();
-        // $tweet->content = $request->tweet();
-        // $tweet->save();
-
         $tweetService->saveTweet(
             $request->userId(),
             $request->tweet(),

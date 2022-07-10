@@ -41,10 +41,28 @@ class TweetService
             foreach ($images as $image) {
                 Storage::putFile('public/images',$image);
                 $imageModal = new Image();
-                $imageModal->name  = $image->hasName();
+                $imageModal->name  = $image->hashName();
                 $imageModal->save();
                 $tweet->images()->attach($imageModal->id);
             }
         });
+    }
+
+    public function deleteTweet(int $tweetId)
+    {
+
+        DB::transaction(function () use ($tweetId) {
+            $tweet = Tweet::where('id', $tweetId)->firstOrFail();
+            $tweet->images()->each(function($image) use($tweet) {
+                $filePath = 'public/images/' . $image->name;
+                if (Storage::exists($filePath)) {
+                    Storage::delete($filePath);
+                }
+                $tweet->images()->detach($image->id);
+                $image->delete();
+            });
+            $tweet->delete();
+        });
+
     }
 }
