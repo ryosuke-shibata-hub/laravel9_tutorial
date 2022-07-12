@@ -63,6 +63,7 @@
             "chmod -R 777 public/"
         ]
     },
+
     "extra": {
         "laravel": {
             "dont-discover": []
