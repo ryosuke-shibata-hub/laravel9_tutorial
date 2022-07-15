@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('resources/views/welcome');
+    return view('welcome');
 });
 
 Route::get('/tweet', \App\Http\Controllers\Tweet\IndexController::class)
