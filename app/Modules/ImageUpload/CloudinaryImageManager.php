@@ -6,6 +6,11 @@ use Cloudinary\Cloudinary;
 
 class CloudinaryImageManager implements ImageManagerInterface
 {
+
+    public function __construct(private Cloudinary $cloudinary)
+    {
+
+    }
     public function save($file):string
     {
         return $this->cloudinary
