@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Modules\ImageUpload\ImageManagerInterface;
 class TweetService
 {
-public function __construct(private ImageManagerInterface $imageManager)
+    public function __construct(private ImageManagerInterface $imageManager)
     {
 
     }
